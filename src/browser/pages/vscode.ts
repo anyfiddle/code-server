@@ -30,8 +30,8 @@ try {
   /* Probably fine. */
 }
 
-;(self.require as any) = {
-  // Without the full URL VS Code will try to load file://.
+;(self as any).require = {
+  // Without the full URL VS Code will try to load file://.w
   baseUrl: `${window.location.origin}${options.csStaticBase}/lib/vscode/out`,
   recordStats: true,
   paths: {
